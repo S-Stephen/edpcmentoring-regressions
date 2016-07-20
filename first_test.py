@@ -6,16 +6,16 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 # This is the only code you need to edit in your existing scripts.
 # The command_executor tells the test to run on Sauce, while the desired_capabilities
 # parameter tells us which browsers and OS to spin up.
-#desired_cap = {
-#    'platform': "Mac OS X 10.9",
-#    'browserName': "chrome",
-#    'version': "31",
-#}
+desired_cap = {
+    'platform': "Mac OS X 10.9",
+    'browserName': "chrome",
+    'version': "31",
+}
 
 # for tavis to call suace:
 username = os.environ["SAUCE_USERNAME"]
 access_key = os.environ["SAUCE_ACCESS_KEY"]
-desired_cap["tunnel-identifier"] = os.environ["TRAVIS_JOB_NUMBER"]
+#desired_cap["tunnel-identifier"] = os.environ["TRAVIS_JOB_NUMBER"]
 hub_url = "%s:%s@localhost:4445" % (username, access_key)
 driver = webdriver.Remote(desired_capabilities=desired_cap, command_executor="http://%s/wd/hub" % hub_url)
   
