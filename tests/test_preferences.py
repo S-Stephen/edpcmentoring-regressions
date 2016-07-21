@@ -13,6 +13,11 @@ class ChangePreferences(unittest.TestCase):
         username = os.environ["SAUCE_USERNAME"]
         access_key = os.environ["SAUCE_ACCESS_KEY"] 
         #desired_cap["tunnel-identifier"] = os.environ["TRAVIS_JOB_NUMBER"]
+        desired_cap = {
+            'platform': "Mac OS X 10.9",
+            'browserName': "chrome",
+            'version': "31",
+        }
         hub_url = "%s:%s@localhost:4445" % (username, access_key) 
         self.driver = webdriver.Remote(desired_capabilities=desired_cap, command_executor="http://%s/wd/hub" % hub_url)
         #self.driver = webdriver.Firefox()
