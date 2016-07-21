@@ -6,6 +6,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re
+import os
 
 class TestPreferences(unittest.TestCase):
     def setUp(self):
@@ -25,7 +26,7 @@ class TestPreferences(unittest.TestCase):
     
     def test_preferences(self):
         driver = self.driver
-        driver.get(self.base_url + "/auth/authenticate.html?ver=3&url=http%3A%2F%2Fcupcmentoring.herokuapp.com%2Fraven_return%2F&desc=&iact=&msg=&params=next%3D%252F&fail=")
+        driver.get("http://cupcmentoring.herokuapp.com")
         driver.find_element_by_id("userid").clear()
         driver.find_element_by_id("userid").send_keys("test0001")
         driver.find_element_by_id("pwd").clear()
