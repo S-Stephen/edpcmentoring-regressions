@@ -34,14 +34,15 @@ class TestPreferences(unittest.TestCase):
         driver.find_element_by_name("submit").click()
         driver.find_element_by_link_text("Change these preferences").click()
         # ERROR: Caught exception [ERROR: Unsupported command [selectWindow | null | ]]
-        self.assertEqual("off", driver.find_element_by_id("id_is_seeking_mentor").get_attribute("value"))
+        self.assertFalse(driver.find_element_by_id("id_is_seeking_mentor").is_selected())
         driver.find_element_by_id("id_is_seeking_mentor").click()
-        try: self.assertEqual("on", driver.find_element_by_id("id_is_seeking_mentor").get_attribute("value"))
-        except AssertionError as e: self.verificationErrors.append(str(e))
+        self.assertTrue(driver.find_element_by_id("id_is_seeking_mentor").is_selected())
         driver.find_element_by_id("submit-id-submit").click()
         driver.find_element_by_link_text("Change these preferences").click()
+        self.assertTrue(driver.find_element_by_id("id_is_seeking_mentor").is_selected())
         driver.find_element_by_id("id_is_seeking_mentor").click()
         driver.find_element_by_id("submit-id-submit").click()
+        self.assertFalse(driver.find_element_by_id("id_is_seeking_mentor").is_selected())
         # ERROR: Caught exception [ERROR: Unsupported command [selectWindow | null | ]]
         driver.find_element_by_link_text("Log out").click()
         driver.get("https://demo.raven.cam.ac.uk/auth/logout.html")

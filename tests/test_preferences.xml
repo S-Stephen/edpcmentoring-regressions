@@ -42,9 +42,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>assertValue</td>
+	<td>assertNotChecked</td>
 	<td>id=id_is_seeking_mentor</td>
-	<td>off</td>
+	<td></td>
 </tr>
 <tr>
 	<td>click</td>
@@ -52,9 +52,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>verifyValue</td>
+	<td>assertChecked</td>
 	<td>id=id_is_seeking_mentor</td>
-	<td>on</td>
+	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -67,6 +67,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>assertChecked</td>
+	<td>id=id_is_seeking_mentor</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>id=id_is_seeking_mentor</td>
 	<td></td>
@@ -74,6 +79,11 @@
 <tr>
 	<td>clickAndWait</td>
 	<td>id=submit-id-submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotChecked</td>
+	<td>id=id_is_seeking_mentor</td>
 	<td></td>
 </tr>
 <tr>
