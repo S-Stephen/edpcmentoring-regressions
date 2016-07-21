@@ -72,6 +72,21 @@
 	<td></td>
 </tr>
 <tr>
+	<td>clickAndWait</td>
+	<td>id=submit-id-submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Log out</td>
+	<td></td>
+</tr>
+<tr>
 	<td>open</td>
 	<td>https://demo.raven.cam.ac.uk/auth/logout.html</td>
 	<td></td>

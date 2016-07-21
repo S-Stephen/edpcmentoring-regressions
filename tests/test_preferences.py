@@ -42,6 +42,9 @@ class TestPreferences(unittest.TestCase):
         driver.find_element_by_id("submit-id-submit").click()
         driver.find_element_by_link_text("Change these preferences").click()
         driver.find_element_by_id("id_is_seeking_mentor").click()
+        driver.find_element_by_id("submit-id-submit").click()
+        # ERROR: Caught exception [ERROR: Unsupported command [selectWindow | null | ]]
+        driver.find_element_by_link_text("Log out").click()
         driver.get("https://demo.raven.cam.ac.uk/auth/logout.html")
     
     def is_element_present(self, how, what):
