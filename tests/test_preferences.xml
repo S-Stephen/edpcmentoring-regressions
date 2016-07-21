@@ -19,11 +19,6 @@
 <tr>
 	<td>type</td>
 	<td>id=userid</td>
-	<td>test</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=userid</td>
 	<td>test0001</td>
 </tr>
 <tr>
@@ -42,9 +37,24 @@
 	<td></td>
 </tr>
 <tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=id_is_seeking_mentor</td>
+	<td>off</td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>id=id_is_seeking_mentor</td>
 	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=id_is_seeking_mentor</td>
+	<td>on</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -61,7 +71,11 @@
 	<td>id=id_is_seeking_mentor</td>
 	<td></td>
 </tr>
-
+<tr>
+	<td>open</td>
+	<td>https://demo.raven.cam.ac.uk/auth/logout.html</td>
+	<td></td>
+</tr>
 </tbody></table>
 </body>
 </html>
