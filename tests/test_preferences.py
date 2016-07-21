@@ -34,8 +34,7 @@ class TestPreferences(unittest.TestCase):
         driver.find_element_by_name("submit").click()
         driver.find_element_by_link_text("Change these preferences").click()
         # ERROR: Caught exception [ERROR: Unsupported command [selectWindow | null | ]]
-        try: self.assertEqual("off", driver.find_element_by_id("id_is_seeking_mentor").get_attribute("value"))
-        except AssertionError as e: self.verificationErrors.append(str(e))
+        self.assertEqual("off", driver.find_element_by_id("id_is_seeking_mentor").get_attribute("value"))
         driver.find_element_by_id("id_is_seeking_mentor").click()
         try: self.assertEqual("on", driver.find_element_by_id("id_is_seeking_mentor").get_attribute("value"))
         except AssertionError as e: self.verificationErrors.append(str(e))
